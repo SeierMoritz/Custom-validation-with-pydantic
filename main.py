@@ -12,6 +12,8 @@ class UserModel(BaseModel):
     username: str
     password1: str
     password2: str
+    clan_role: str
+    favourite_leviathan: str
 
     @validator('name')
     def name_must_contain_space(cls, v):
@@ -29,6 +31,9 @@ class UserModel(BaseModel):
     def username_alphanumeric(cls, v):
         assert v.isalnum(), 'must be alphanumeric'
         return v
+
+    @validator('clan_role')
+    def clan_role_needs_to_be_elder_or_higher(self):
 
 
 user = UserModel(

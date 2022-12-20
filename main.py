@@ -36,16 +36,16 @@ class UserModel(BaseModel):
     def clan_role_needs_to_be_elder(cls,v):
         if 'clan_role' is 'Elder':
             return v
-        else
+        else:
             return 'Not high enough'
 
     @validator('favourite_leviathan')
     def favourite_leviathan_needs_to_be_frostworm(cls,v):
-        if 'favourite_leviathan' is 'Frostworm'
+        if 'favourite_leviathan' is 'Frostworm':
             return v
-        if 'favourite leviathan' is 'Reaper'
+        if 'favourite leviathan' is 'Reaper':
             return 'naja'
-        else
+        else:
             return 'no'
 
 

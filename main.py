@@ -33,24 +33,42 @@ class UserModel(BaseModel):
         return v
 
     @validator('clan_role')
-    def clan_role_needs_to_be_elder_or_higher(self):
+    def clan_role_needs_to_be_elder(cls,v):
+        if 'clan_role' is 'Elder':
+            return v
+        else
+            return 'Not high enough'
+
+    @validator('favourite_leviathan')
+    def favourite_leviathan_needs_to_be_frostworm(cls,v):
+        if 'favourite_leviathan' is 'Frostworm'
+            return v
+        if 'favourite leviathan' is 'Reaper'
+            return 'naja'
+        else
+            return 'no'
+
 
 
 user = UserModel(
-    name='samuel colvin',
-    username='scolvin',
-    password1='zxcvbn',
-    password2='zxcvbn',
+    name='Moritz Seier',
+    username='ProgrammierenMemo',
+    password1='12345789',
+    password2='246810',
+    clan_role='Elder',
+    favourite_leviathan='Frostworm'
 )
 print(user)
-#> name='Samuel Colvin' username='scolvin' password1='zxcvbn' password2='zxcvbn'
+#> name='Moritz Seier' username='ProgrammierenMemo' password1='123456789' password2='13579' clan_role="Elder" favourite_leviathan="Frostworm"
 
 try:
     UserModel(
-        name='samuel',
-        username='scolvin',
-        password1='zxcvbn',
-        password2='zxcvbn2',
+        name='Moritz',
+        username='ProgrammierenMemo',
+        password1='123456789',
+        password2='13579',
+        clan_role='Elder',
+        favourite_leviathan="Frostworm"
     )
 except ValidationError as e:
     print(e)

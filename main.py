@@ -13,7 +13,7 @@ class UserModel(BaseModel):
     password1: str
     password2: str
     clan_role: str
-    favourite_leviathan: str
+    favourite_truppe: str
 
     @validator('name')
     def name_must_contain_space(cls, v):
@@ -40,10 +40,10 @@ class UserModel(BaseModel):
             return 'Not high enough'
 
     @validator('favourite_leviathan')
-    def favourite_leviathan_needs_to_be_frostworm(cls,v):
-        if 'favourite_leviathan' is 'Frostworm':
+    def favourite_troupe_needs_to_be_giant(cls,v):
+        if 'favourite_truppe' is 'giant':
             return v
-        if 'favourite leviathan' is 'Reaper':
+        if 'favourite_truppe' is 'bowler':
             return 'naja'
         else:
             return 'no'
@@ -56,10 +56,10 @@ user = UserModel(
     password1='12345789',
     password2='246810',
     clan_role='Elder',
-    favourite_leviathan='Frostworm'
+    favourite_truppe='Lumberjack'
 )
 print(user)
-#> name='Moritz Seier' username='ProgrammierenMemo' password1='123456789' password2='13579' clan_role="Elder" favourite_leviathan="Frostworm"
+#> name='Moritz Seier' username='ProgrammierenMemo' password1='123456789' password2='13579' clan_role="Elder" favourite_truppe="Lumberjack"
 
 try:
     UserModel(

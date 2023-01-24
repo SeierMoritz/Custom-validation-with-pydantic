@@ -18,6 +18,10 @@ ob diese richtig oder falsch erscheinen.
 ### Wie programmiere ich es?
 
 1. Erstmals muss von pydantic BaseModel, ValidationError und validator importiert werden. Dazu auch von fastapi... FastAPI
-2. 
+2. Danach bleibt es offen für euch persönlich wie ihr es wollt, man kann verschiedene "custom" validators in einem UserModel einfügen, welche später durch str definiert werden.
+3. Nun muss aber auch eingefügt werden, was die requirements sind, dafür, dass die validators was ausspucken. Hier können es matching validators sein, true/false, etc.
+4. Danach (geht auch davor) sollte man seine eigenen gewollten Werte einfügen, auf welche geprüft werden muss.
+5. Fast am Ende fügt man die UserModels ein, welche durch die Validators überprüft werden.
+6. Die Fehlermeldung verfassen, woran ich selbst auch noch sitze.
 
 #### Placeholder

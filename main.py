@@ -39,14 +39,11 @@ class UserModel(BaseModel):
         else:
             return 'Not high enough'
 
-    @validator('favourite_leviathan')
-    def favourite_troupe_needs_to_be_giant(cls,v):
-        if 'favourite_truppe' is 'giant':
-            return v
-        if 'favourite_truppe' is 'bowler':
-            return 'naja'
-        else:
-            return 'no'
+    @validator('favourite_truppe')
+    def favourite_troupe_needs_to_match(cls, v, values, **kwargs):
+        if 'favourite:truppe' in values and v != values['favourite_truppe']:
+            raise ValueError('Die Polizei kommt')
+        return v
 
 
 
@@ -56,7 +53,7 @@ user = UserModel(
     password1='12345789',
     password2='246810',
     clan_role='Elder',
-    favourite_truppe='Lumberjack'
+    favourite_truppe='giant'
 )
 print(user)
 #> name='Moritz Seier' username='ProgrammierenMemo' password1='123456789' password2='13579' clan_role="Elder" favourite_truppe="Lumberjack"
@@ -68,7 +65,7 @@ try:
         password1='123456789',
         password2='13579',
         clan_role='Elder',
-        favourite_leviathan="Frostworm"
+        favourite_truppe='lumberjack'
     )
 except ValidationError as e:
     print(e)
@@ -78,4 +75,5 @@ except ValidationError as e:
       must contain a space (type=value_error)
     password2
       passwords do not match (type=value_error)
+    There may be else errors
     """

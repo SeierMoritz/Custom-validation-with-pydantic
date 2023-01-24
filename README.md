@@ -1,7 +1,17 @@
 # Custom-validation-with-pydantic
 
-## Überschrift 2
+###Das braucht ihr:
 
-### Überschrift 3
+fastapi
 
-#### Überschrift 4
+pydantic = pip install pydantic
+
+uvicorn
+
+## Was ist das eigentlich?
+
+Custom validaters 
+
+### Wie programmiere ich es?
+
+#### Placeholder

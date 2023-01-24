@@ -33,16 +33,15 @@ class UserModel(BaseModel):
         return v
 
     @validator('clan_role')
-    def clan_role_needs_to_be_elder(cls,v):
-        if 'clan_role' == 'Elder':
-            return v
-        else:
-            return 'Not high enough'
+    def clan_role_there(cls,v):
+        if 'Member' or 'Elder' or 'Vize-Leader' not in v:
+            raise ValueError('must contain the role')
+        return v
 
     @validator('favourite_truppe')
     def favourite_troupe_needs_to_match(cls, v, values, **kwargs):
-        if 'favourite:truppe' in values and v != values['favourite_truppe']:
-            raise ValueError('Die Polizei kommt')
+        if 'favourite_truppe' in values and v != values['favourite_truppe']:
+            raise ValueError('Unsympathisch')
         return v
 
 
@@ -60,7 +59,7 @@ print(user)
 
 try:
     UserModel(
-        name='Moritz',
+        name='Moritz Seier',
         username='ProgrammierenMemo',
         password1='123456789',
         password2='13579',

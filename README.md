@@ -25,3 +25,7 @@ ob diese richtig/falsch erscheinen oder mit dem originalen Wert matchen und noch
 6. Die Fehlermeldung verfassen, woran ich selbst auch noch sitze.
 
 #### Placeholder
+
+##### Aktuelle Probleme
+
+* Nur Favourite Truppe

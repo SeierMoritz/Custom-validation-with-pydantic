@@ -34,7 +34,7 @@ class UserModel(BaseModel):
 
     @validator('clan_role')
     def clan_role_needs_to_be_elder(cls,v):
-        if 'clan_role' is 'Elder':
+        if 'clan_role' == 'Elder':
             return v
         else:
             return 'Not high enough'
@@ -70,10 +70,6 @@ try:
 except ValidationError as e:
     print(e)
     """
-    2 validation errors for UserModel
-    name
-      must contain a space (type=value_error)
-    password2
-      passwords do not match (type=value_error)
-    There may be else errors
+    Validation errors for UserModel.
+    Try again.
     """

@@ -2,11 +2,13 @@
 
 #### Das braucht ihr:
 
-fastapi
+fastapi = pip install "fastapi[all]"
 
 pydantic = pip install pydantic
 
-uvicorn
+uvicorn = pip install uvicorn
+
+for pure python uvicorn = pip install uvicorn [standard]
 
 ## Was ist das eigentlich?
 

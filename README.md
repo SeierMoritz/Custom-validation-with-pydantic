@@ -25,7 +25,11 @@ Zusammengefasst: Sorgt dafür, dass die eingegeben Daten valide sind.
 5. Fast am Ende fügt man die UserModels ein, welche durch die Validators überprüft werden.
 6. Die Fehlermeldung verfassen, woran ich selbst auch noch sitze.
 
-#### Placeholder
+#### Sonstiges:
+
+#### Anwendungsschwierigkeit:
+
+Easy, aber kann daran liegen, dass ich nichts checke
 
 ##### Aktuelle Probleme
 

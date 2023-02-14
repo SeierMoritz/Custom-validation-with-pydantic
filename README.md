@@ -14,7 +14,8 @@ for pure python uvicorn = pip install uvicorn [standard]
 
 Custom validaters sind class methods, welche für UserModels benutzt werden, um diese auf gewisse validators v zu prüfen,
 ob diese richtig/falsch erscheinen oder mit dem originalen Wert matchen und noch vieles mehr.
-Zusammengefasst: Sorgt dafür, dass die eingegeben Daten valide sind.
+Zusammengefasst: Sorgt dafür, dass die eingegeben Daten valide sind und sich Nutzer mit mehreren Sicherheitsvorkehrungen
+einloggen können.
 
 ### Wie programmiere ich es?
 
@@ -27,6 +28,8 @@ Zusammengefasst: Sorgt dafür, dass die eingegeben Daten valide sind.
 
 #### Sonstiges:
 
+Nix
+
 #### Anwendungsschwierigkeit:
 
 Easy, aber kann daran liegen, dass ich nichts checke
@@ -34,3 +37,4 @@ Easy, aber kann daran liegen, dass ich nichts checke
 ##### Aktuelle Probleme
 
 * Nur Favourite Truppe
+* Und grafische Darstellung

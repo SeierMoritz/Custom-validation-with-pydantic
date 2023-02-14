@@ -33,8 +33,8 @@ class UserModel(BaseModel):
         return v
 
     @validator('clan_role')
-    def clan_role_there(cls,v):
-        if 'Member' or 'Elder' or 'Vize-Leader' not in v:
+    def clan_role_there(cls, v):
+        if v not in ['Member', 'Elder', 'Vize-Leader']:
             raise ValueError('must contain the role')
         return v
 

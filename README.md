@@ -26,15 +26,12 @@ einloggen können.
 5. Fast am Ende fügt man die UserModels ein, welche durch die Validators überprüft werden.
 6. Die Fehlermeldung verfassen, woran ich selbst auch noch sitze.
 
-#### Sonstiges:
-
-Nix
-
 #### Anwendungsschwierigkeit:
 
 Easy, aber kann daran liegen, dass ich nichts checke
 
 ##### Aktuelle Probleme
 
-* Nur Favourite Truppe
-* Und grafische Darstellung
+* Nur Favourite Truppe (solved)
+* Clan Role (solved. Kuss an den Herr Professor)
+* Und grafische Darstellung 
